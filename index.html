@@ -5,7 +5,9 @@
 </style></head><body><main>
 <header class="hero"><div><p class="eyebrow">INTRO TO SOFTWARE TECHNOLOGY</p><h1>Organizing Content with Flexbox</h1><p>Lesson 12 Practice Lab - div containers, Flexbox layouts, coding, and debugging</p></div><div class="scorebox"><strong id="score">0</strong><span>of 250 points</span></div></header>
 <section class="student"><h2>Student Information</h2><p>Enter your first and last name and choose your class period. Then click <strong>Begin Practice Lab</strong> to open the activities.</p><div class="fields"><label>Student Name<input id="studentName" placeholder="First and last name" autocomplete="name"></label><label>Class Period<select id="classPeriod"><option value="">Choose your class</option><option>1st Block</option><option>2nd Block</option><option>3rd Block</option><option>4th Block</option></select></label></div><div class="buttons"><button id="beginLab" class="action">Begin Practice Lab</button></div><div id="studentInfoFeedback" class="feedback"></div></section>
-<section class="reminder"><h2>Flexbox Reminder</h2><p>Place related content inside a div. Apply Flexbox properties to the container's CSS rule.</p><pre>&lt;div class="gallery"&gt;
+<div id="labActivities" class="hidden"><nav id="labTabs" class="tabs" aria-label="Activities"><button class="tab active" data-panel="review">1. Review</button><button class="tab" data-panel="divs">2. Div Containers</button><button class="tab" data-panel="flex">3. Write Flexbox</button><button class="tab" data-panel="debug">4. Debug</button><button class="tab" data-panel="apply">5. Apply</button></nav>
+
+<section id="review" class="panel active"><h2>Review Divs and Flexbox</h2><section class="reminder"><h2>Flexbox Reminder</h2><p>Place related content inside a div. Apply Flexbox properties to the container's CSS rule.</p><pre>&lt;div class="gallery"&gt;
   &lt;img src="one.jpg" alt="First example"&gt;
   &lt;img src="two.jpg" alt="Second example"&gt;
 &lt;/div&gt;
@@ -15,10 +17,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}</pre></section>
-<div id="labActivities" class="hidden"><nav id="labTabs" class="tabs" aria-label="Activities"><button class="tab active" data-panel="review">1. Review</button><button class="tab" data-panel="divs">2. Div Containers</button><button class="tab" data-panel="flex">3. Write Flexbox</button><button class="tab" data-panel="debug">4. Debug</button><button class="tab" data-panel="apply">5. Apply</button></nav>
-
-<section id="review" class="panel active"><h2>Review Divs and Flexbox</h2><p>Answer five randomized questions. Answer choices are also randomized.</p><div class="progress"><span id="reviewBar"></span></div><div id="reviewQuestion"></div><div id="reviewFeedback" class="feedback"></div><div class="buttons"><button id="reviewNext" class="action hidden">Next Question</button><button class="action secondary next-panel" data-next="divs">Next Activity</button></div></section>
+}</pre></section><p>Answer five randomized questions. Answer choices are also randomized.</p><div class="progress"><span id="reviewBar"></span></div><div id="reviewQuestion"></div><div id="reviewFeedback" class="feedback"></div><div class="buttons"><button id="reviewNext" class="action hidden">Next Question</button><button class="action secondary next-panel" data-next="divs">Next Activity</button></div></section>
 
 <section id="divs" class="panel"><h2>Build a Div Container</h2><p>Place the heading, paragraph, and two images inside one div with the class <code>gallery</code>. Use matching opening and closing div tags.</p><label>index.html<textarea id="divCode" spellcheck="false">&lt;h2&gt;Pet Gallery&lt;/h2&gt;
 &lt;p&gt;Here are two favorite pets.&lt;/p&gt;
